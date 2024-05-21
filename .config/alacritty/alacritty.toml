@@ -16,6 +16,10 @@ blur = true
 
 option_as_alt = "Both"
 
+[window.dimensions]
+columns = 133
+lines = 40
+
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
 
