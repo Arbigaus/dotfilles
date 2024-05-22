@@ -1,7 +1,12 @@
 !# /bin/zsh
 
-echo "Installing Homebrew"
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ $(command -v brew) == "" ]]; then
+  echo "Installing Hombrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
+  echo "Updating Homebrew"
+  brew update
+fi
 echo "Homebrew installed"
 
 echo "Installing Alacritty and and terminal configs"
@@ -23,3 +28,4 @@ stow .
 
 echo "Installing Cocoapods"
 brew install cocoapods
+brew install git-svn
