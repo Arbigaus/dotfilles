@@ -3,6 +3,8 @@
 if [[ $(command -v brew) == "" ]]; then
   echo "Installing Hombrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   echo "Updating Homebrew"
   brew update
@@ -29,3 +31,7 @@ stow .
 echo "Installing Cocoapods"
 brew install cocoapods
 brew install git-svn
+
+echo "Setting Alacritty theme"
+mkdir -p ~/.config/alacritty/themes &&
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
