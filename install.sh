@@ -25,9 +25,7 @@ brew install nvim
 brew install stow
 brew install bat
 
-if [ ! -d "~/.oh-my-zsh" ] then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
+[ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Configuring the dotfiles"
 stow . --ignore install.sh
