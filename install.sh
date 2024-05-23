@@ -26,7 +26,7 @@ brew install stow
 brew install bat
 
 echo "Configuring the dotfiles"
-stow .
+stow . --ignore install.sh
 
 echo "Installing Cocoapods"
 brew install cocoapods
