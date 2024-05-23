@@ -1,6 +1,6 @@
 # Dotfiles
-=====
-## About
+
+## Configurations 
 This project is my personal dotfiles configurations.  
 There is configurations to the Apps below:
 
@@ -10,16 +10,32 @@ There is configurations to the Apps below:
 - Oh my zsh
 - p10k  
 
+## Applications
 This project will install some applications:  
 
 - Alacritty
-- NeoVim
+- Neovim
 - Oh my zsh
 - Dotfiles
-brew install tmux
-brew install nodejs
-brew install lazygit
-brew install nvim
-brew install stow
-brew install bat
+- tmux
+- nodejs
+- lazygit
+- nvim
+- stow
+- bat
+
+## How to install
+Clone this project to the user folder
+
+```bash
+cd 
+git clone git@github.com:Arbigaus/dotfilles.git
+```
+
+access the dotfiles folder and run the install script
+
+```bash
+cd dotfiles
+./install.sh
+```
 
