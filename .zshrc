@@ -20,7 +20,6 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 # Auto-update behavior
 zstyle ':omz:update' mode auto      # update automatically without asking
