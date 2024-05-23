@@ -1,13 +1,4 @@
-# Before use this file, run all commands below
 #
-# brew tap homebrew/cask-fonts
-# brew install --cask alacritty
-# brew install font-meslo-lg-nerd-font
-# brew install powerlevel10k
-# brew install zsh-autosuggestions
-# brew install zsh-syntax-highlighting
-# brew install eza
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,8 +10,11 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Theme config
-source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
+if [[ $(echo $HOMEBREW_PREFIX) == "" ]]; then
+  export HOMEBREW_PREFIX="/usr/local"
+fi
 
+source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 

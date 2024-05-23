@@ -1,4 +1,4 @@
-!# /bin/zsh
+#! /bin/zsh
 
 if [[ $(command -v brew) == "" ]]; then
   echo "Installing Hombrew"
@@ -24,6 +24,8 @@ brew install lazygit
 brew install nvim
 brew install stow
 brew install bat
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Configuring the dotfiles"
 stow . --ignore install.sh
