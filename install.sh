@@ -25,7 +25,11 @@ brew install nvim
 brew install stow
 brew install bat
 
+echo "Verifing and installing `Oh My ZSH`"
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Verifing and installing `Tmux plugins`"
+[ ! -d ~/.tmux/plugins/tpm ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Configuring the dotfiles"
 stow . --ignore install.sh
