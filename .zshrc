@@ -31,6 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias gcr="gco regressao"
 alias xx="xed ."
+alias x="xed"
 alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias cdd="rm -rf ~/Library/Developer/Xcode/DerivedData/"
 alias ls="eza --icons=always"
@@ -40,3 +41,4 @@ alias cat="bat"
 alias lg="lazygit"
 alias c="clear"
 alias ta="tmux a"
+alias pj="cd ~/Projects"
