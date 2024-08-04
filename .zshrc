@@ -9,6 +9,12 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Android SDK Paths
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools 
+export PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/ 
+export PATH=$PATH:$HOME/Android/Sdk/build-tools/32.1.0-rc1/ 
+export PATH=$PATH:$HOME/Android/Sdk/emulator/bin64/
+
 # Theme config
 if [[ $(echo $HOMEBREW_PREFIX) == "" ]]; then
   export HOMEBREW_PREFIX="/usr/local"
