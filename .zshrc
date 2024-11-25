@@ -15,6 +15,11 @@ export PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/
 export PATH=$PATH:$HOME/Android/Sdk/build-tools/32.1.0-rc1/ 
 export PATH=$PATH:$HOME/Android/Sdk/emulator/bin64/
 
+# Start tmux
+if [ -z "$TMUX" ]; then
+    tmux new-session -A -s Dev || ~/dotfilles/start_tmux.sh
+fi
+
 # Theme config
 if [[ $(echo $HOMEBREW_PREFIX) == "" ]]; then
   export HOMEBREW_PREFIX="/usr/local"
@@ -48,3 +53,5 @@ alias lg="lazygit"
 alias c="clear"
 alias ta="tmux a"
 alias pj="cd ~/Projects"
+alias x15="open /Applications/Xcode15.app/Contents/MacOS/Xcode"
+

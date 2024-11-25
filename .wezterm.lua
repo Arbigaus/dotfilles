@@ -15,7 +15,7 @@ config = {
 
   -- Window configuration
   enable_tab_bar = false,
-  window_background_opacity = 0.9,
+  window_background_opacity = 0.8,
   macos_window_background_blur = 20,
   window_decorations = "RESIZE",
   use_resize_increments = true,
