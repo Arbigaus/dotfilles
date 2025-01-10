@@ -4,9 +4,6 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- System configuration
-config.window_close_confirmation = 'NeverPrompt'
-
 config = {
   -- Font configuration
   font = wezterm.font('JetBrainsMono Nerd Font'),
@@ -19,8 +16,9 @@ config = {
   macos_window_background_blur = 20,
   window_decorations = "RESIZE",
   use_resize_increments = true,
-  initial_cols = 120,
-  initial_rows = 35
+  initial_cols = 180,
+  initial_rows = 50,
+  window_close_confirmation = 'NeverPrompt'
 }
 
 return config

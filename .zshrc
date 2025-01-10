@@ -15,11 +15,6 @@ export PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/
 export PATH=$PATH:$HOME/Android/Sdk/build-tools/32.1.0-rc1/ 
 export PATH=$PATH:$HOME/Android/Sdk/emulator/bin64/
 
-# Start tmux
-if [ -z "$TMUX" ]; then
-    tmux new-session -A -s Dev || ~/dotfilles/start_tmux.sh
-fi
-
 # Theme config
 if [[ $(echo $HOMEBREW_PREFIX) == "" ]]; then
   export HOMEBREW_PREFIX="/usr/local"
@@ -28,6 +23,14 @@ fi
 source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Mise config
+eval "$(~/.local/bin/mise activate zsh)"
+
+# chruby config
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.3.5
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -54,4 +57,4 @@ alias c="clear"
 alias ta="tmux a"
 alias pj="cd ~/Projects"
 alias x15="open /Applications/Xcode15.app/Contents/MacOS/Xcode"
-
+alias tmux="~/dotfilles/start_tmux.sh"

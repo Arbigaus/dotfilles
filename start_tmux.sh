@@ -16,10 +16,7 @@ else
     echo "Session $SESSION_NAME does not exist. Creating a new session..."
 
     # Start TMUX with a session named "Dev" and create the first window
-    tmux new-session -d -s $SESSION_NAME -n PR -c ~/Projects/Procore/iOS
-
-    # Create the second window named "CF"
-    tmux new-window -t $SESSION_NAME -n CF -c ~/Projects/Claro/app-ios
+    tmux new-session -d -s $SESSION_NAME -n CF -c ~/Projects/Claro/app-ios
 
     # Create the third window without a name (defaults to directory name)
     tmux new-window -t $SESSION_NAME -c ~/
