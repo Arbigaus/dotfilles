@@ -18,6 +18,15 @@ return {
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup {}
+      lspconfig.sourcekit.setup {
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dymanicRegistration = true
+            }
+          }
+        }
+      }
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
