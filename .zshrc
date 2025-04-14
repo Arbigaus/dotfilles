@@ -58,3 +58,10 @@ alias ta="tmux a"
 alias pj="cd ~/Projects"
 alias x15="open /Applications/Xcode15.app/Contents/MacOS/Xcode"
 alias tmux="~/dotfilles/start_tmux.sh"
+
+# bun completions
+[ -s "/Users/arbigaus/.bun/_bun" ] && source "/Users/arbigaus/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
