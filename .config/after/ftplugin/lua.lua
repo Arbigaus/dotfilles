@@ -1,5 +1,0 @@
-vim.cmd("setlocal tabstop=2")
-vim.cmd("setlocal shiftwidth=2")
-vim.cmd("setlocal expandtab")
-vim.cmd("setlocal autoindent")
-vim.cmd("setlocal smarttab")
