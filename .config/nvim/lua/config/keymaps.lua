@@ -21,6 +21,9 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", '<Tab>', ':bnext<CR>')
 vim.keymap.set("n", '<S-Tab>', ':bprevious<CR>')
 
+-- Exit Terminal --
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
 -- Telescope --
 vim.keymap.set("n", "<Leader>fd", require('telescope.builtin').find_files)
 vim.keymap.set("n", "<Leader>fh", require('telescope.builtin').help_tags)
