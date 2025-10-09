@@ -15,19 +15,17 @@ return {
       },
     },
     config = function()
-      local lspconfig = require("lspconfig")
+       vim.lsp.config('sourcekit', {
+         capabilities = {
+           workspace = {
+             didChangeWatchedFiles = {
+               dymanicRegistration = true
+             }
+           }
+         }
+      })
 
-      lspconfig.ts_ls.setup {}
-      lspconfig.lua_ls.setup {}
-      lspconfig.sourcekit.setup {
-        capabilities = {
-          workspace = {
-            didChangeWatchedFiles = {
-              dymanicRegistration = true
-            }
-          }
-        }
-      }
+      vim.lsp.enable({'ts_ls', 'sourcekit', 'ts_ls'})
     end
   }
 }

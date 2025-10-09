@@ -40,7 +40,6 @@ plugins=(git colorize sudo)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # Aliases
-alias gcr="gco regressao"
 alias xx="xed ."
 alias x="xed"
 alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
@@ -53,7 +52,6 @@ alias lg="lazygit"
 alias c="clear"
 alias ta="tmux a"
 alias pj="cd ~/Projects"
-alias x15="open /Applications/Xcode15.app/Contents/MacOS/Xcode"
 alias tmux="~/dotfilles/start_tmux.sh"
 
 # bun completions
