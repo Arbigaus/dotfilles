@@ -1,0 +1,7 @@
+require("plugins.colorscheme")
+require("plugins.lspconfig")
+require("plugins.openscad")
+require("plugins.conform")
+require("plugins.fzf")
+require("plugins.mini_comment")
+require("plugins.oil")

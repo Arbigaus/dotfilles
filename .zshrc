@@ -7,10 +7,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Android SDK Paths
-# export PATH=$PATH:$HOME/Android/Sdk/platform-tools 
-# export PATH=$PATH:$HOME/Android/Sdk/cmdline-tools/latest/bin/ 
-# export PATH=$PATH:$HOME/Android/Sdk/build-tools/32.1.0-rc1/ 
-# export PATH=$PATH:$HOME/Android/Sdk/emulator/bin64/
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+
+# Java (Zulu JDK 17 - React Native)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # Theme config
 if [[ $(echo $HOMEBREW_PREFIX) == "" ]]; then
@@ -40,6 +43,9 @@ plugins=(git colorize sudo)
 source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # Aliases
+alias rn-new="npx @react-native-community/cli init"
+alias rn-ios="npx react-native run-ios"
+alias rn-android="npx react-native run-android"
 alias xx="xed ."
 alias x="xed"
 alias ios-simulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
@@ -52,7 +58,16 @@ alias lg="lazygit"
 alias c="clear"
 alias ta="tmux a"
 alias pj="cd ~/Projects"
-alias tmux="~/dotfilles/start_tmux.sh"
+# alias tmux="$HOME/dotfilles/start_tmux.sh"
+# alias connect-mine="$HOME/Documents/Minecraft/connect-minecraft.sh"
+# alias start-mine="curl 'https://wortlt3na5a3fql32oxehe3rzq0cihsx.lambda-url.us-east-2.on.aws/?instanceId=i-0fd4a4f5dd1a3963f'"
+# alias stop-mine="curl 'https://wortlt3na5a3fql32oxehe3rzq0cihsx.lambda-url.us-east-2.on.aws/?instanceId=i-0fd4a4f5dd1a3963f&action=stop'"
+
+# Python user scripts
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
+# Rust / Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # bun completions
 [ -s "/Users/arbigaus/.bun/_bun" ] && source "/Users/arbigaus/.bun/_bun"
